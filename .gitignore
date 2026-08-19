@@ -1,5 +1,6 @@
 # Ignore local class materials
 class_materials/
+reading/
 
 # Ignore Python cache files
 __pycache__/
