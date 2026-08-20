@@ -67,3 +67,21 @@ data/, src/, notebooks/, docs/
 - calibrated curve objects and model parameters in model/
 - Updated weekly, in step with each stage's homework
 
+# Stakeholder Brief — <Rates Curve & Swap Pricing Toolkit>
+**Audience:** <Rates desk trader / supporting quant-risk analyst> | **Cadence:** <On-demand (once per session or daily)> **Decision Supported:** <Sanity-checking a swap PV or DV01 before acting on it or escalating it>
+
+## Context
+A rates trader does quick checks most days — does this swap's DV01 look right, has the curve moved enough to matter for the hedge. Today that means either waiting on the production pricing system, which is built for booking trades and slow to spin up for a one-off, or eyeballing it, which is not defensible when someone later asks how the number was derived. There is no fast, transparent, rerunnable way to answer "what is this worth on today's curve" without setup overhead.
+
+## What You'll Receive
+- A bootstrapped discount curve from the latest published Treasury par yields, with zero rates and discount factors by tenor.
+- A priced vanilla interest rate swap: PV and DV01, plus how both shift when the curve moves.
+- A plain-language note on the assumptions behind every number — single-curve discounting, stated day-count conventions, data as of the last published business day.
+
+## Assumptions & Constraints
+- Single-curve discounting off Treasury par yields; production desks use dual-curve OIS discounting.
+- Free market swap quotes do not exist, so numbers are validated against QuantLib and self-consistency checks rather than against dealer quotes.
+- End-of-day published data — suitable for research and verification, not for live execution.
+Day-count and business-day conventions are stated explicitly, since they materially change PV.
+
+
