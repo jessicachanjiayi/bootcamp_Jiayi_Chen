@@ -1,5 +1,5 @@
 
-# Project Title
+# Rates Curve & Swap Pricing Toolkit
 **Stage:** Problem Framing & Scoping (Stage 01)
 
 ## Problem Statement
